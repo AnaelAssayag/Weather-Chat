@@ -32,7 +32,7 @@ var data_array = {
       tempF: 48,
       hour:10, 
       date:'01/01/2018',
-      comment_array:{comment:[{text:'good'}, {text:'I love it'}]}
+      comment_array:[{text:'good'}, {text:'I love it'}]
    },
      {
      id:2,
