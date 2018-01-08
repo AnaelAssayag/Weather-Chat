@@ -8,22 +8,25 @@ var fetch = function () {
             console.log(data.main.temp)
             // var array = [{name: "Marseille", temp: 18, tempF: 48, hour:10, date:'01/01/2018'}]
             // var dataArray = {data: array};
-            var obj = {id:12,
-                name: data.name, 
-                temp: Math.floor(data.main.temp  - 273.15), 
-                tempF: Math.floor((data.main.temp *9/5) -  459.67),
-                hour:new Date().getHours(), 
+            var obj = {
+                id: 12,
+                name: data.name,
+                temp: Math.floor(data.main.temp - 273.15),
+                tempF: Math.floor((data.main.temp * 9 / 5) - 459.67),
+                hour: new Date().getHours(),
                 date: new Date(),
-                comment_array:[ ]
-             }
+                comment_array: []
+            }
             data_array['data'].push(obj)
-            
+
 
             renderArray();
 
 
 
-            
+
+
+
             // displayWeather(data);
 
             // set date to good format
@@ -37,28 +40,33 @@ var fetch = function () {
 
 $('.searchF').on('click', fetch)
 
-var data_array = { 
-    data:[]}
+var data_array = {
+    data: []
+}
 
 
 var renderArray = function () {
 
 
-
-    $('.weatherT').remove(newHTML)
+    $('.weatherT').find('.template').remove();
     var source = $('#store-template').html();
     var template = Handlebars.compile(source);
     var newHTML = template(data_array)
 
-    // $('.weatherT').append(newHTML)
+    $('.weatherT').append(newHTML)
 
-                // hour: today.getHours(
+    $('.searchC').on('click', addComment)
+
+    // hour: today.getHours(
     // $('.fa-trash-o').on('click', remove)
 
     // $('.searchC').on('click', addComment)
 
 }
 
+var addComment = function() {
+    
+}
 
 // var remove = function() {
 //     var elmt = $(this).closest('.dataTemp')

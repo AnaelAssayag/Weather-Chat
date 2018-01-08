@@ -30,8 +30,8 @@
             </span>
           </div>
           <hr>
-          <script  id="store-template" type="text/x-handlebars-template">
-            <div>
+          <script id="store-template"  type="text/x-handlebars-template">
+            <div class="template">
             {{#each data}}
           <div class="dataTemp" data-id={{id}}> 
             <div>{{name}} <i class="fa fa-trash-o" aria-hidden="true"></i>
@@ -48,47 +48,28 @@
                 <div> {{text}} </div>
                 {{/each}}
                 </div>
-            
-
-
-
+   
             {{/each}}
           </div>
 
           </script>
 
-          <!-- <script id="store-template" type="text/x-handlebars-template">
-                          <div class="border border-secondary">
-                            <div class="inputU">
-                            <h4>{{name}} <i class="fa fa-trash" aria-hidden="true"></i>
-                            </h4> 
-                            <div class="dataTemp"> <strong>{{temp}}°C</strong>  / <strong>{{tempF}} °F</strong> at {{hour}} on {{date }} </div>
-                          </div>
-                            <div class="commentForm">
-                            <input type="text" class="form-control comment"  placeholder="Comment about the weather in {{city}}"> 
-                            <span class="input-group-btn">
-                                <button class="btn btn-default commentButton"  type="button">Comment</button>
-                           </span>
-                          </div> 
-                          </div>
-
-                        </script> -->
           <div class="weatherT"></div>
-
-          </div> 
 
         </div>
 
-
-
-
-
       </div>
 
-      <div class="col-1"></div>
+
+
 
 
     </div>
+
+    <div class="col-1"></div>
+
+
+  </div>
 
 
 
