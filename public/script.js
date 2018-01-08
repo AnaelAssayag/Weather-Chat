@@ -42,8 +42,9 @@ var data_array = {
      hour:10, 
      date:'01/01/2018',
      comment_array:[{text:'good'}, {text:'I love it'}]
-     }]
+
     }
+]}
 
 
 var renderArray = function () {
