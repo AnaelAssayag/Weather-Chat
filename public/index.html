@@ -31,11 +31,21 @@
           </div>
           <hr>
           <script  id="store-template" type="text/x-handlebars-template">
-          <div class="dataTemp"> {{temp}}°C/ {{temp}}°F at {{hour}} on {{date}} </div>
+            <div>
+            {{#each data}}
+          <div class="dataTemp"> 
+            <div>{{name}}</div>
+            {{temp}}°C/ {{temp}}°F at {{hour}} on {{date}} </div>
 
-          
+            {{/each}}
+          </div>
+
           </script>
-
+          <!-- <div class="addComment">
+              {{#each comment_array }}
+              <div>{{comment_array}}</div>
+              {{/each}}
+            </div> -->
           <!-- <script id="store-template" type="text/x-handlebars-template">
                           <div class="border border-secondary">
                             <div class="inputU">
