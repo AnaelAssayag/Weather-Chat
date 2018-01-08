@@ -33,10 +33,10 @@
           <script  id="store-template" type="text/x-handlebars-template">
             <div>
             {{#each data}}
-          <div class="dataTemp" data-id=1> 
+          <div class="dataTemp" data-id={{id}}> 
             <div>{{name}} <i class="fa fa-trash-o" aria-hidden="true"></i>
             </div>
-            {{temp}}°C/ {{temp}}°F at {{hour}} on {{date}} </div>
+            {{temp}}°C/ {{tempF}}°F at {{hour}} on {{date}} </div>
             <div class="commInput">
             <input type="text" class="form-control commentB" placeholder="Comment about the Weather">
             <button class="btn btn-default searchC" type="button">Comment</button>

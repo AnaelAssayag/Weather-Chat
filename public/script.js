@@ -8,6 +8,16 @@ var fetch = function () {
             console.log(data.main.temp)
             // var array = [{name: "Marseille", temp: 18, tempF: 48, hour:10, date:'01/01/2018'}]
             // var dataArray = {data: array};
+            var obj = {id:12,
+                name: data.name, 
+                temp: Math.floor(data.main.temp  - 273.15), 
+                tempF: Math.floor((data.main.temp *9/5) -  459.67),
+                hour:10, 
+                date:new Date(),
+                comment_array:[{text:'good'}, {text:'I love it'}]
+             }
+            data_array['data'].push(obj)
+
             renderArray();
 
 
@@ -26,24 +36,7 @@ $('.searchF').on('click', fetch)
 
 var data_array = { 
     data:[
-      {id:1,
-      name: 'Marseille', 
-      temp: 18, 
-      tempF: 48,
-      hour:10, 
-      date:'01/01/2018',
-      comment_array:[{text:'good'}, {text:'I love it'}]
-   },
-     {
-     id:2,
-     name: 'Paris', 
-     temp: 0, 
-     tempF: 48,
-     hour:10, 
-     date:'01/01/2018',
-     comment_array:[{text:'good'}, {text:' it'}]
 
-    }
 ]}
 
 
@@ -58,7 +51,10 @@ var renderArray = function () {
                 // hour: today.getHours(
     // $('.fa-trash-o').on('click', remove)
 
+    // $('.searchC').on('click', addComment)
+
 }
+
 
 // var remove = function() {
 //     var elmt = $(this).closest('.dataTemp')
