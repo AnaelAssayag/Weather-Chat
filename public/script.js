@@ -41,7 +41,7 @@ var data_array = {
      tempF: 48,
      hour:10, 
      date:'01/01/2018',
-     comment_array:[{text:'good'}, {text:'I love it'}]
+     comment_array:[{text:'good'}, {text:' it'}]
 
     }
 ]}
@@ -56,5 +56,11 @@ var renderArray = function () {
     $('.weatherT').append(newHTML)
 
                 // hour: today.getHours(
+    // $('.fa-trash-o').on('click', remove)
 
 }
+
+// var remove = function() {
+//     var elmt = $(this).closest('.dataTemp')
+//     array.filter
+// }
