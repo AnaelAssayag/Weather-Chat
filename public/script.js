@@ -12,11 +12,12 @@ var fetch = function () {
                 name: data.name, 
                 temp: Math.floor(data.main.temp  - 273.15), 
                 tempF: Math.floor((data.main.temp *9/5) -  459.67),
-                hour:10, 
-                date:new Date(),
-                comment_array:[{text:'good'}, {text:'I love it'}]
+                hour:new Date().getHours(), 
+                date: new Date(),
+                comment_array:[ ]
              }
             data_array['data'].push(obj)
+            
 
             renderArray();
 
@@ -24,6 +25,8 @@ var fetch = function () {
 
             
             // displayWeather(data);
+
+            // set date to good format
 
         },
         error: function (jqXHR, textStatus, errorThrown) {
@@ -35,18 +38,19 @@ var fetch = function () {
 $('.searchF').on('click', fetch)
 
 var data_array = { 
-    data:[
-
-]}
+    data:[]}
 
 
 var renderArray = function () {
-    //Set date in specific format
+
+
+
+    $('.weatherT').remove(newHTML)
     var source = $('#store-template').html();
     var template = Handlebars.compile(source);
     var newHTML = template(data_array)
 
-    $('.weatherT').append(newHTML)
+    // $('.weatherT').append(newHTML)
 
                 // hour: today.getHours(
     // $('.fa-trash-o').on('click', remove)
