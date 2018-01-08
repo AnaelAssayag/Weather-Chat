@@ -36,11 +36,16 @@
           <div class="dataTemp" data-id=1> 
             <div>{{name}}</div>
             {{temp}}°C/ {{temp}}°F at {{hour}} on {{date}} </div>
+
             <div class="addComment">
-                {{#each comment_array }}
-                <div>{{comment_array}}</div>
+                {{#each comment }}
+                <div>{{text}</div>
                 {{/each}}
-            </div>
+                </div>
+            
+
+
+
             {{/each}}
           </div>
 
@@ -64,6 +69,7 @@
                         </script> -->
           <div class="weatherT"></div>
 
+          </div> 
 
         </div>
 
