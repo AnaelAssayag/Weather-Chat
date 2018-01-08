@@ -33,19 +33,19 @@
           <script  id="store-template" type="text/x-handlebars-template">
             <div>
             {{#each data}}
-          <div class="dataTemp"> 
+          <div class="dataTemp" data-id=1> 
             <div>{{name}}</div>
             {{temp}}°C/ {{temp}}°F at {{hour}} on {{date}} </div>
-
+            <div class="addComment">
+                {{#each comment_array }}
+                <div>{{comment_array}}</div>
+                {{/each}}
+            </div>
             {{/each}}
           </div>
 
           </script>
-          <!-- <div class="addComment">
-              {{#each comment_array }}
-              <div>{{comment_array}}</div>
-              {{/each}}
-            </div> -->
+
           <!-- <script id="store-template" type="text/x-handlebars-template">
                           <div class="border border-secondary">
                             <div class="inputU">
