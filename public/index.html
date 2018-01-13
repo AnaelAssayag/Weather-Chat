@@ -24,37 +24,38 @@
           </label>
 
           <div class="input-group getTemp">
-            <input type="text" class="form-control" id="input_city" placeholder="Enter City">
+            <input type="text" class="form-control " id="input_city" placeholder="Enter City">
             <span class="input-group-btn">
               <button class="btn btn-default searchF" type="button">Get Temp</button>
             </span>
           </div>
           <hr>
           <script id="store-template"  type="text/x-handlebars-template">
-            <div class="template">
-            {{#each data}}
+          <div class="template">
+            {{#each citiesArray}}
           <div class="dataTemp" data-id={{id}}> 
-            <div>{{name}} <i class="fa fa-trash-o" aria-hidden="true"></i>
-            </div>
-            {{temp}}°C/ {{tempF}}°F at {{hour}} on {{date}} </div>
+            <div>{{name}} <i class="fa fa-trash-o" aria-hidden="true"></i></div>
+            {{temp}}°C / {{tempF}}°F at {{hour}} on {{date}} 
+            
             <div class="commInput">
-            <input type="text" class="form-control commentB" placeholder="Comment about the Weather">
-            <button class="btn btn-default searchC" type="button">Comment</button>
-
+              <input type="text" class="form-control commentB" placeholder="Comment about the Weather">
+              <button class="btn btn-default searchC" type="button">Comment</button>
            </div>
 
-            <div class="addComment">
+            <div class="comments">
                 {{#each comment_array}}
                 <div> {{text}} </div>
                 {{/each}}
-                </div>
-   
+            </div>
+            
+          </div>
             {{/each}}
           </div>
 
           </script>
 
           <div class="weatherT"></div>
+        </div>
 
         </div>
 
